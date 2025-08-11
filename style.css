@@ -1,0 +1,176 @@
+/* FONT STYLES: Regular 400 Bold 700 */
+
+:root {
+  --primary-font: "Cabin Sketch", sans-serif;
+  --symbol-font-size: 6vw;
+  --font-color: white;
+  --h1-font-size: 5vw;
+  --h2-font-size: 3.5vw;
+  --btn-font-size: 2.5vw;
+  --p-font-size: 1.5vw;
+  --number-font: "Orbitron", sans-serif;
+  --number-color: #00ff00;
+  --number-font-size: 2vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+h1 {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: var(--h1-font-size);
+  padding: 0.1rem;
+}
+h2 {
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  font-size: var(--h2-font-size);
+  font-weight: 250;
+}
+p {
+  font-family: var(--primary-font);
+  font-size: var(--symbol-font-size);
+  color: var(--font-color);
+}
+ol {
+  line-height: 2.5rem;
+}
+#time-display {
+  text-align: center;
+  font-family: var(--number-font);
+  font-size: var(--number-font-size);
+  color: var(--number-color);
+  display: block;
+  /* display: none; */
+}
+#box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 80vh;
+  width: 80vw;
+  background-image: url("./images/noita-digital-QZX8jbK1xEw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  display: none;
+}
+.box {
+  border: 3px solid transparent;
+  border-image: url("./images/blackboard.jpg") 30 stretch;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box:first-child {
+  border-top: none;
+  border-left: none;
+}
+.box:nth-child(2) {
+  border-top: none;
+}
+.box:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+.box:nth-child(4) {
+  border-left: none;
+}
+.box:nth-child(6) {
+  border-right: none;
+}
+.box:nth-child(7) {
+  border-left: none;
+  border-bottom: none;
+}
+.box:nth-child(8) {
+  border-bottom: none;
+}
+.box:last-child {
+  border-bottom: none;
+  border-right: none;
+}
+#info-container {
+  background-image: url("./images/noita-digital-QZX8jbK1xEw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 80vw;
+  /* padding: 2rem; */
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 1rem; */
+}
+.list-container {
+  width: 60%;
+}
+#info-list {
+  color: var(--font-color);
+  font-family: var(--primary-font);
+  font-size: var(--p-font-size);
+}
+/* #start-btn {
+  padding: 1rem;
+  font-size: var(--btn-font-size);
+  font-family: var(--primary-font);
+  background-color: #7d7a7f;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+} */
+#start-btn {
+  padding: 1rem;
+  font-size: var(--btn-font-size);
+  font-family: var(--primary-font);
+  background-color: #7d7a7f;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+#start-btn:hover {
+  transform: scale(1.2);
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19),
+    0 8px 8px rgba(255, 255, 255, 0.23);
+  color: black;
+}
+#newGame-btn {
+  padding: 1rem;
+  font-size: var(--btn-font-size);
+  font-family: var(--primary-font);
+  /* background-color: #e6e6e6; */
+  background-color: #4c4c4c;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #b3b3b3;
+  display: none;
+}
+
+#newGame-btn:hover {
+  transform: scale(1.2);
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23);
+  color: black;
+}

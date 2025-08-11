@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tick-Tock-Go!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tick-Tock-Go!</h1>
+      <div id="time-display">00.00</div>
+    </header>
+    <main>
+      <div id="box-container">
+        <div class="box" id="box-top-left"></div>
+        <div class="box" id="box-top-middle"></div>
+        <div class="box" id="box-top-right"></div>
+        <div class="box" id="box-middle-left"></div>
+        <div class="box" id="box-middle-middle"></div>
+        <div class="box" id="box-middle-right"></div>
+        <div class="box" id="box-bottom-left"></div>
+        <div class="box" id="box-bottom-middle"></div>
+        <div class="box" id="box-bottom-right"></div>
+      </div>
+      <!-- newGame button -->
+      <button class="btn" id="newGame-btn" onclick="newGame()">NEW GAME</button>
+      <div id="info-container">
+        <h2>How to Play</h2>
+        <div class="list-container">
+          <ol id="info-list">
+            <li>This is a single-player game.</li>
+            <li>
+              You have 30 seconds to get three of the same symbols in a row
+              (horizontally, vertically, or diagonally.)
+            </li>
+            <li>Timer starts soon as you make your first move.</li>
+            <li>
+              A random symbol between {X, O, ♤, ♧, ♡, ♢, ☆, ☾, ☀} will be
+              generated on each box you click.
+            </li>
+            <li>
+              In every half a second, a random move you made will be deleted
+              which you can re-click to generate a new random symbol.
+            </li>
+
+            <li>Click the START button to load the game.</li>
+            <li>Don't forget to have fun and goodluck!</li>
+          </ol>
+        </div>
+        <button class="btn" id="start-btn" onclick="loadGame()">START</button>
+      </div>
+    </main>
+  </body>
+</html>
