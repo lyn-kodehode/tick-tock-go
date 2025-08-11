@@ -175,6 +175,7 @@ let clickCounter = 0;
 // targets boxes to create HTML elements function
 function createSymbols(event) {
   boxContainer.style.cursor = "pointer";
+
   // time function call
   if (clickCounter === 1) {
     startTime();
@@ -186,76 +187,76 @@ function createSymbols(event) {
 
   if (e.textContent === "") {
     if (e === boxTopLeft) {
+      clickCounter++;
       myMove = document.createElement("p");
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxTopMiddle) {
+      clickCounter++;
       myMove = document.createElement("p");
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxTopRight) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxMiddleLeft) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxMiddleMiddle) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxMiddleRight) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxBottomLeft) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxBottomMiddle) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else if (event.target === boxBottomRight) {
       myMove = document.createElement("p");
+      clickCounter++;
       // myMove.textContent = randomizer(symbolsEasy);
       myMove.textContent = randomizer(symbolsMedium);
       // myMove.textContent = randomizer(symbolsHard);
       e.append(myMove);
-      clickCounter++;
       clickedBoxes.push(e.id);
     } else {
       window.alert("Please click on the right box");
@@ -274,7 +275,7 @@ function loadGame() {
 // alert window when game is lost
 function confirmNewGameLost() {
   let userAnswer = confirm(
-    `SORRY YOUR ${clickCounter} CLICKS DIDN'T HELP YOU WIN 😫\n\n Would you like to start a new game?`
+    `\nSORRY YOUR ${clickCounter} CLICKS DIDN'T HELP YOU WIN 😫\n\n Would you like to start a new game?`
   );
 
   if (userAnswer) {
@@ -287,7 +288,7 @@ function confirmNewGameLost() {
 // alert window when game is won
 function confirmNewGameWon() {
   let userAnswer = confirm(
-    `CONGRATULATIONS! YOU WIN!!! ⭐⭐⭐⭐⭐\nTook you ${
+    `\nCONGRATULATIONS! YOU WIN!!! ⭐⭐⭐⭐⭐\n\nTook you ${
       30 - timeLeft
     } seconds and ${clickCounter} clicks to finish the game!\n\n Would you like to start a new game?`
   );
