@@ -275,7 +275,7 @@ function loadGame() {
 // alert window when game is lost
 function confirmNewGameLost() {
   let userAnswer = confirm(
-    `\nSORRY YOUR ${clickCounter} CLICKS DIDN'T HELP YOU WIN 😫\n\n Would you like to start a new game?`
+    `\nTIME'S UP!!!\n\nYour ${clickCounter} clicks didn't help you win 😫\n\n Would you like to start a new game?`
   );
 
   if (userAnswer) {
