@@ -274,7 +274,7 @@ function loadGame() {
 
 // alert window when game is lost
 function confirmNewGameLost() {
-  let userAnswer = confirm(
+  let userAnswer = window.confirm(
     `\nTIME'S UP!!!\n\nYour ${clickCounter} clicks didn't help you win 😫\n\n Would you like to start a new game?`
   );
 
@@ -287,7 +287,7 @@ function confirmNewGameLost() {
 
 // alert window when game is won
 function confirmNewGameWon() {
-  let userAnswer = confirm(
+  let userAnswer = window.confirm(
     `\nCONGRATULATIONS! YOU WIN!!! ⭐⭐⭐⭐⭐\n\nTook you ${
       30 - timeLeft
     } seconds and ${clickCounter} clicks to finish the game!\n\n Would you like to start a new game?`
